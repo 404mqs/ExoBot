@@ -2,15 +2,11 @@ const Discord = require(`discord.js`);
 const config = require('./config.json');
 const client = new Discord.Client();
 
-
-
 client.commands = new Discord.Collection();
 const prefix = config.prefix;
 
-
-
 client.on('ready', () => {
-    console.log(`Megaphone ON! Con ${client.users.cache.size} usuarios, en ${client.channels.cache.size} canales de ${client.guilds.cache.size} servers.`);
+    console.log(`EXO ON! Con ${client.users.cache.size} usuarios, en ${client.channels.cache.size} canales de ${client.guilds.cache.size} servers.`);
     client.user.setStatus("Online")
 
     client.on("message", async message => 
